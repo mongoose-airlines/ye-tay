@@ -1,0 +1,216 @@
+:root {
+  --cursive: "Dancing Script", cursive;
+  --serif: "Playfair Display", serif;
+}
+
+body {
+  --body-bg: #8a8b9b;
+  --tay: linear-gradient(
+    to right top,
+    #d65db1,
+    #e861a2,
+    #f46993,
+    #fc7486,
+    #ff827b,
+    #ff8f73,
+    #ff9d6d,
+    #ffac69,
+    #ffbe66,
+    #ffd166,
+    #ffe469,
+    #f9f871
+  );
+  --ye: linear-gradient(
+    to right top,
+    #0069ff,
+    #0075fe,
+    #007ffc,
+    #0089f9,
+    #0092f4,
+    #009bf1,
+    #00a3eb,
+    #00aae5,
+    #00b3dc,
+    #00b9c9,
+    #00bdad,
+    #00bf8c
+  );
+  --light-dark-btn-bg: linear-gradient(
+    to right top,
+    #22232b,
+    #292b3a,
+    #303241,
+    #373949,
+    #3e4050,
+    #454757,
+    #4b4d5d,
+    #525464,
+    #5a5c6c,
+    #616374,
+    #696b7d,
+    #717385
+  );
+  --header-bg: #007bbe;
+  --header-text-color: #d8d8d8;
+  --btn-text-color: #2a2a2a;
+  --inverted-btn-text-color: #eaeaea;
+  --card-text-color: #3e3e3e;
+  --light-dark-btn-content: "Dark Mode";
+  text-align: center;
+  background-color: var(--body-bg);
+}
+
+body.dark {
+  --body-bg: #22232b;
+  --tay: linear-gradient(
+    to right top,
+    #440069,
+    #50006e,
+    #5d0072,
+    #690076,
+    #75007a,
+    #8a0073,
+    #9d006c,
+    #ac0064,
+    #bd134f,
+    #c52f39,
+    #c54a22,
+    #be6300
+  );
+  --ye: linear-gradient(
+    to right top,
+    #213555,
+    #213c59,
+    #22425d,
+    #254960,
+    #2a4f63,
+    #264c61,
+    #224860,
+    #1e455e,
+    #173757,
+    #18294e,
+    #1d1941,
+    #210632
+  );
+  --light-dark-btn-bg: linear-gradient(
+    to right top,
+    #444655,
+    #595b6b,
+    #6f7181,
+    #868898,
+    #9ea0b0,
+    #acaebe,
+    #bbbccd,
+    #cacbdc,
+    #d2d4e5,
+    #dadced,
+    #e3e5f6,
+    #ebeeff
+  );
+  --header-bg: #005e9d;
+  --header-text-color: #d8d8d8;
+  --btn-text-color: #eaeaea;
+  --inverted-btn-text-color: #2a2a2a;
+  --card-text-color: #dedede;
+  --light-dark-btn-content: "Light Mode";
+  background-color: var(--body-bg);
+}
+
+h1 {
+  background-color: var(--header-bg);
+  color: var(--header-text-color);
+  font-family: var(--serif);
+  font-size: 3.5em;
+  font-weight: 700;
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+
+.btn {
+  border: none;
+  color: var(--btn-text-color);
+  font-family: var(--cursive);
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 30px;
+}
+
+.btn:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+#lightDarkButton {
+  background-image: var(--light-dark-btn-bg);
+}
+
+#lightDarkButton::after {
+  border: none;
+  color: var(--inverted-btn-text-color);
+  content: var(--light-dark-btn-content);
+}
+
+#yeezyButton {
+  background-image: var(--ye);
+}
+
+#swiftButton {
+  background-image: var(--tay);
+}
+
+#containerDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
+  width: 100%;
+}
+
+.card {
+  color: var(--card-text-color);
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 95%;
+}
+
+#yeezy {
+  background-image: var(--ye);
+}
+
+#t-swift {
+  background-image: var(--tay);
+}
+
+.blockquote-footer {
+  color: var(--card-text-color);
+  font-family: var(--cursive);
+  font-size: 24px;
+  font-weight: 500;
+  text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  #containerDiv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .btn {
+    margin: 10px 20px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  #containerDiv {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 30px;
+    width: 100%;
+  }
+}
