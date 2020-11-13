@@ -9,8 +9,8 @@ console.log(body)
 
 const colorScheme = {
   dark: false,
-  changeColorScheme: function () {
-    colorScheme.dark ? (colorScheme.dark = false) : (colorScheme.dark = true);
+  change: function () {
+    colorScheme.dark = colorScheme.dark ? false : true;
     const color = colorScheme.dark ? "dark" : "";
     body.setAttribute("class", color)
   },
@@ -18,7 +18,7 @@ const colorScheme = {
 
 function checkUserColorSchemePreference() {
   if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
-    colorScheme.changeColorScheme()
+    colorScheme.change()
   }
 }
 
@@ -56,7 +56,7 @@ yeezyBtn.addEventListener("click", () => {
     });
 });
 
-lightDarkBtn.addEventListener("click", colorScheme.changeColorScheme);
+lightDarkBtn.addEventListener("click", colorScheme.change);
 
 function render() {
   container.innerHTML = "";
